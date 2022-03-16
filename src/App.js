@@ -2,6 +2,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from "./views/home";
 import Punks from "./views/punks";
+import Punk from "./views/punk";
 import MainLayout from "./layouts/main";
 //yarn add @types/web3 -D
 function App() {
@@ -13,6 +14,7 @@ function App() {
         
         <Route path="/"element={<Home />} />
         <Route path="/punks"element={<Punks />} />
+        <Route path="/punks/:tokenId" element={<Punk />} />
         
       </Routes>
       </MainLayout>
