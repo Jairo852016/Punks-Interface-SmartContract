@@ -1,6 +1,7 @@
 
 import { Routes, Route } from 'react-router-dom';
 import Home from "./views/home";
+import Punks from "./views/punks";
 import MainLayout from "./layouts/main";
 //yarn add @types/web3 -D
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         
         <Route path="/"element={<Home />} />
+        <Route path="/punks"element={<Punks />} />
         
       </Routes>
       </MainLayout>
