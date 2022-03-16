@@ -32,7 +32,7 @@ const WalletData = () => {
 
   const getBalance = useCallback(async () => {
     const toSet = await library.eth.getBalance(account);
-    setBalance((toSet / 1e18).toFixed(4));
+    setBalance((toSet / 1e18).toFixed(2));
   }, [library?.eth, account]);
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const WalletData = () => {
       {active ? (
         <Tag colorScheme="green" borderRadius="full">
           <TagLabel>
-            <Link to="/punks">{truncatedAddress}</Link>
+            <Link to={`/punks?address=${account}`}>{truncatedAddress}</Link>
           </TagLabel>
           <Badge
             d={{
